@@ -1,0 +1,9 @@
+{
+    "name": "netcrave/pscr_content",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "pscr\\extensions\\pscr_content\\": "extensions/pscr_content/"
+        }
+    }
+}
