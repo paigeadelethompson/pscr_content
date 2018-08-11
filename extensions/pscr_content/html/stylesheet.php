@@ -31,7 +31,7 @@ class stylesheet extends link
         return $this;
     }
     public function cross_origin($origin) {
-        $this->crossorigin = $orgin;
+        $this->crossorigin = $origin;
         return $this;
     }
 }

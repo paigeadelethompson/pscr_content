@@ -167,6 +167,11 @@ abstract class html_tag
         return $this;
     }
 
+    public function value($value) {
+        $this->value = $value;
+        return $this;
+    }
+
     /**
      * @return string
      * @throws \ReflectionException

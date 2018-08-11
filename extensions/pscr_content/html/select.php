@@ -13,4 +13,8 @@ use pscr\extensions\pscr_content\model\html_tag;
 class select extends html_tag
 {
 
+    function multiple() {
+        $this->multiple = null;
+        return $this;
+    }
 }

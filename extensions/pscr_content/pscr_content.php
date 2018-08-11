@@ -131,6 +131,7 @@ final class pscr_content implements i_content_renderer
         $tag_name = $html_obj->__toString();
         $doc_string .= "<" . $tag_name;
 
+        // tag properties
         if(count($html_obj->properties) > 0) {
             $doc_string .= ' ';
             $iter = new \CachingIterator(new \ArrayIterator($html_obj->properties));
@@ -143,6 +144,10 @@ final class pscr_content implements i_content_renderer
                     //$attr_name = end($attr_name_split);
                     $attr_name = $value->__toString();
                     $doc_string .= $attr_name . "=\"" . $value->GetAttributeValueString() . "\"";
+                }
+                else if($value == "") {
+                    // just append the property without a value (eg <option disabled selected)
+                    $doc_string .= $key;
                 }
                 else {
                     // attribute is just a key value pair

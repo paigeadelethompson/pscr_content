@@ -13,4 +13,18 @@ use pscr\extensions\pscr_content\model\html_tag;
 class option extends html_tag
 {
 
+    function disabled() {
+        $this->disabled = null;
+        return $this;
+    }
+
+    function selected() {
+        $this->selected = null;
+        return $this;
+    }
+
+    function hidden() {
+        $this->hidden = null;
+        return $this;
+    }
 }

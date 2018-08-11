@@ -31,4 +31,9 @@ class input extends html_tag
         $this->value = $value;
         return $this;
     }
+    //pattern="[0-9]{5}"
+    function numeric() {
+        $this->pattern .= "[0-9]";
+        return $this;
+    }
 }
