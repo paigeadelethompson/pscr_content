@@ -25,4 +25,13 @@ class stylesheet extends link
     {
         return "link";
     }
+
+    public function integrity($integ) {
+        $this->integrity = $integ;
+        return $this;
+    }
+    public function cross_origin($origin) {
+        $this->crossorigin = $orgin;
+        return $this;
+    }
 }
