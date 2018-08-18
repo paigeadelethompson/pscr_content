@@ -11,5 +11,8 @@ use pscr\extensions\pscr_content\model\html_tag;
 
 class img extends html_tag
 {
-
+    function src($src) {
+        $this->src = $src;
+        return $this;
+    }
 }
