@@ -17,4 +17,9 @@ class select extends html_tag
         $this->multiple = null;
         return $this;
     }
+
+    function size($size) {
+        $this->size = $size;
+        return $this;
+    }
 }

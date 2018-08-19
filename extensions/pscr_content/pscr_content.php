@@ -67,16 +67,22 @@ final class pscr_content implements i_content_renderer
     {
         $module_filename = $this->request->get_selected_route_entry_file_name();
         $module_classname = $this->request->get_selected_route_entry_class_name();
+        $module_pathname = $this->request->get_selected_route_entry_path_name();
 
         logger::_()->info($this, "trying to instantiate ", $module_classname, $module_filename);
+
         require_once($module_filename);
 
         if (class_exists($module_classname)) {
             if (is_a(new $module_classname(), 'pscr\extensions\pscr_content\model\pscr_content')) {
                 $module = (new $module_classname());
 
+                $settings = new app_settings($module_pathname);
+
                 $module->set_request_instance($this->request);
                 $module->set_response_instance($this->response);
+                $module->set_settings_instance($settings);
+
                 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $module->process_post($_REQUEST);
                 }
@@ -93,7 +99,9 @@ final class pscr_content implements i_content_renderer
                 else {
                     throw new invalid_argument_exception('Specified HTTP method not supported for pscr_content');
                 }
+
                 return $module;
+
             }
             else {
                 throw new invalid_argument_exception("found class but class does not extend pscr_content class or implement the i_pscr_content interface.");

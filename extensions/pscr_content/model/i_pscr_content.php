@@ -50,7 +50,10 @@ interface i_pscr_content
      * @return mixed
      */
     function generate();
-    function process_post($data);
-    function process_put($data);
-    function process_delete($name);
+    function process_post();
+    function process_put();
+    function process_delete();
+    function set_request_instance($instance);
+    function set_response_instance($instance);
+    function set_settings_instance($instance);
 }

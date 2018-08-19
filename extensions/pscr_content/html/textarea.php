@@ -13,4 +13,13 @@ use pscr\extensions\pscr_content\model\html_tag;
 class textarea extends html_tag
 {
 
+    function rows($rows) {
+        $this->rows = $rows;
+        return $this;
+    }
+
+    function cols($cols) {
+        $this->cols = $cols;
+        return $this;
+    }
 }

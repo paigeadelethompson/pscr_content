@@ -82,15 +82,19 @@ abstract class pscr_content implements i_pscr_content {
         $this->response->set_header("content-type", "text/html");
     }
 
-    function process_post($data) {
+    function set_settings_instance($settings) {
+        $this->settings = $settings;
+    }
+
+    function process_post() {
         throw new not_implemented_exception("pscr_content object doesn't implement an override for process_post");
     }
 
-    function process_put($data) {
+    function process_put() {
         throw new not_implemented_exception("pscr_content object doesn't implement an override for process_put");
     }
 
-    function process_delete($data) {
+    function process_delete() {
         throw new not_implemented_exception("pscr_content object doesn't implement an override for process_delete");
     }
 }
