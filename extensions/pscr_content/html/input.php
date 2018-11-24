@@ -82,6 +82,11 @@ class input extends html_tag
         return $this;
     }
 
+    function checkbox() {
+        $this->type = "checkbox";
+        return $this;
+    }
+
     function submit() {
         $this->type = "submit";
         return $this;
@@ -133,7 +138,7 @@ class input extends html_tag
         return $this;
     }
 
-    function maxlength($len) {
+    function max_length($len) {
         $this->maxlength = $len;
         return $this;
     }
@@ -148,13 +153,18 @@ class input extends html_tag
         return $this;
     }
 
-    function novalidate() {
+    function no_validate() {
         $this->novalidate = null;
         return $this;
     }
 
-    function autofocus() {
+    function auto_focus() {
         $this->autofocus = null;
+        return $this;
+    }
+
+    function checked() {
+        $this->checked = null;
         return $this;
     }
 

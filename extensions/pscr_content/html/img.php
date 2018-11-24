@@ -13,6 +13,7 @@ class img extends html_tag
 {
     function src($src) {
         $this->src = $src;
+        $this->close_tag = 1;
         return $this;
     }
 }
