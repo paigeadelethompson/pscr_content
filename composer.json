@@ -1,6 +1,9 @@
 {
-    "name": "netcrave/pscr_content",
+    "name": "paigeadelethompson/pscr_content",
     "type": "library",
+     "license": [
+       "GPL-3.0-or-later"
+    ],
     "autoload": {
         "psr-4": {
             "pscr\\extensions\\pscr_content\\": "extensions/pscr_content/"
