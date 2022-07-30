@@ -21,5 +21,4 @@ jobs:
           include: |
             pscr\extensions\pscr_content\**
           ignored_files: |
-            *object.php*
-            *app_settings.php*
+            **
