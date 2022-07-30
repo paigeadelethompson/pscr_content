@@ -22,4 +22,4 @@ jobs:
             pscr\extensions\pscr_content\**
           ignored_files: |
             extensions/html/object.php
-            extensions/app_settings.php
+            extensions/pscr_content/app_settings.php
