@@ -13,8 +13,8 @@ jobs:
     steps:
       - name: Checkouting project code...
         uses: actions/checkout@v2
-      - name: Updating wiki...
-        uses: impresscms-dev/phpdocs-wiki-update-action@v2.2.0
+      - name: Update wiki with PHP project documentation
+        uses: impresscms-dev/phpdocs-wiki-update-action@v2.2
         with:
           engine: clean/phpdoc-md
           class_root_namespace: pscr\extensions\pscr_content\
