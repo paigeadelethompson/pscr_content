@@ -9,7 +9,7 @@
 namespace pscr\extensions\pscr_content\html;
 use pscr\extensions\pscr_content\model\html_tag;
 
-class xxx_object extends html_tag
+class object extends html_tag
 {
 
 }
