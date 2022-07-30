@@ -18,3 +18,5 @@ jobs:
         with:
           engine: clean/phpdoc-md
           class_root_namespace: pscr\extensions\pscr_content\
+          include: |
+            *\**
